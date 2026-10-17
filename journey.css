@@ -1,0 +1,305 @@
+
+/* Vertical sound sculpture: organic frequencies, not a helical DNA strand */
+.sound-journey{position:relative;isolation:isolate;background:linear-gradient(180deg,#10132905,#10162a90 15%,#17132d9c 55%,#121b3299 90%,transparent);overflow:clip;min-height:3300px}
+#journeyWave{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0;mix-blend-mode:screen}
+.journey-heading{position:relative;z-index:2;text-align:center;padding:130px 20px 60px;color:#f9f2ff}.journey-heading span,.chapter-index{font:10px 'DM Sans',sans-serif;letter-spacing:.26em;color:#cbbce3}.journey-heading h2{font:400 clamp(56px,9vw,132px)/.95 Italiana,Georgia,serif;margin:25px 0}.journey-heading h2 em{color:#eec3ed;font-weight:400}.journey-heading p{font:14px 'DM Sans',sans-serif;color:#e3d6f0}
+#journeyChapters{position:relative;z-index:2}
+.sound-chapter{min-height:850px;display:grid;grid-template-columns:1fr 1.25fr;align-items:center;gap:3vw;padding:90px max(6vw,24px);position:relative}
+.sound-chapter:nth-child(2){direction:rtl}.sound-chapter:nth-child(2)>*{direction:ltr}
+.chapter-copy{max-width:460px;position:relative;z-index:4;opacity:.48;transform:translateY(35px);transition:opacity .8s,transform .8s}.sound-chapter.in-view .chapter-copy{opacity:1;transform:translateY(0)}
+.chapter-copy h3{font:400 clamp(76px,10vw,150px)/.94 Italiana,Georgia,serif;color:#fff3ff;margin:20px 0}.chapter-copy h3 em{font-weight:400;color:#eab8ea}.chapter-copy p{font:14px/1.9 'DM Sans',sans-serif;color:#e2d7ed;max-width:360px}.chapter-try{margin-top:30px;display:inline-flex;align-items:center;gap:18px;background:transparent;border:0;border-bottom:1px solid #eec7ec;color:#fff5fa;padding:13px 0;font:11px 'DM Sans',sans-serif;letter-spacing:.16em;cursor:pointer;transition:gap .25s,color .25s}.chapter-try:hover{gap:29px;color:#a5e5ff}.chapter-try:focus-visible{outline:2px solid #a5e5ff;outline-offset:5px}
+.animal-3d{position:relative;z-index:3;min-height:500px;display:grid;place-items:center;perspective:1100px;transform-style:preserve-3d;pointer-events:none;filter:drop-shadow(0 22px 45px #04061390)}
+.animal-3d .sculpture{position:relative;width:min(100%,680px);aspect-ratio:1.3;transform-style:preserve-3d;transform:rotateY(var(--turn, -12deg)) rotateX(var(--tilt, 7deg)) translateY(var(--rise,0px));transition:transform .15s linear}
+.sculpture svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible;filter:drop-shadow(0 16px 20px #080d2a88)}
+.sculpture .animal-shadow{transform:translate3d(19px,16px,-24px);filter:blur(8px);opacity:.4}.sculpture .animal-depth{transform:translate3d(12px,9px,-12px);filter:brightness(.4)}.sculpture .animal-front{transform:translateZ(24px);filter:drop-shadow(0 0 17px #ac9cff55)}
+.sculpture .animal-glint{transform:translateZ(38px);opacity:.8}
+.animal-3d:before{content:'';position:absolute;width:75%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,#afa6ff24,transparent 68%);filter:blur(25px)}
+.sound-chapter:nth-child(2) .animal-3d:before{background:radial-gradient(circle,#76d5f22a,transparent 68%)}
+.sound-chapter:nth-child(3) .animal-3d:before{background:radial-gradient(circle,#f0a5d92a,transparent 68%)}
+.chapter-side-label{position:absolute;bottom:12%;right:6%;font:10px 'DM Sans',sans-serif;letter-spacing:.2em;color:#d5c5e7a8}
+@media(max-width:760px){.sound-journey{min-height:0}.journey-heading{padding:95px 20px 20px}.sound-chapter,.sound-chapter:nth-child(2){min-height:760px;display:flex;flex-direction:column-reverse;justify-content:center;gap:0;padding:35px 24px 80px;direction:ltr}.animal-3d{width:100%;min-height:310px}.animal-3d .sculpture{width:100%}.chapter-copy h3{font-size:75px;margin:10px 0}.chapter-copy p{font-size:13px}.chapter-side-label{display:none}}
+@media(prefers-reduced-motion:reduce){.chapter-copy{opacity:1;transform:none}.animal-3d .sculpture{transition:none}}
+
+/* Scroll-driven water entry and ASCII animal sculpture */
+.sound-journey{isolation:isolate;background:linear-gradient(180deg,#12132b 0%,#171630 22%,#101b32 45%,#08223a 70%,#061628 100%)}
+.sound-journey:before{content:'';position:absolute;inset:28% 0 0;z-index:0;pointer-events:none;background:linear-gradient(180deg,transparent 0%,#5ab7d51a 19%,#0a567340 46%,#03142799 100%);opacity:var(--plunge,0);transition:opacity .12s}
+.water-threshold{height:350px;position:relative;z-index:2;display:flex;align-items:center;justify-content:center;overflow:hidden;pointer-events:none}
+.water-threshold span{position:relative;z-index:2;font:10px 'DM Sans',sans-serif;letter-spacing:.35em;color:#c9f3ffb8;text-align:center}
+.water-surface{position:absolute;top:50%;left:-15%;width:130%;height:2px;background:#c9f7ffb5;box-shadow:0 0 20px 6px #86c9ed66,0 20px 65px 25px #69bbef25;transform:rotate(-2deg)}
+.water-surface:before,.water-surface:after{content:'';position:absolute;inset:-12px 0;opacity:.5;border-top:1px solid #c6efff88;border-radius:50%;transform:scaleY(.8)}
+.water-surface:after{inset:-26px 0;transform:scaleY(.6) rotate(1deg);opacity:.3}
+.water-ripples{position:absolute;inset:50% -10% 0;background:repeating-radial-gradient(ellipse at 55% 0%,transparent 0 38px,#8dd9ef14 39px 40px,transparent 42px 85px);transform:perspective(400px) rotateX(62deg);opacity:.65}
+.ocean-atmosphere{position:absolute;inset:37% 0 0;z-index:1;pointer-events:none;opacity:var(--plunge,0);background:radial-gradient(ellipse at 48% 5%,#8bcbe318,transparent 55%)}
+.ocean-particles{width:100%;height:100%;display:block}
+.sound-chapter{z-index:3}.sound-chapter:nth-of-type(3),.sound-chapter:nth-of-type(4){background:linear-gradient(180deg,transparent,#06223822)}
+.animal-3d .sculpture{aspect-ratio:1.3;filter:drop-shadow(0 0 23px #a9bfff38)}
+.animal-3d .sculpture svg{display:none}
+.ascii-creature{position:absolute;inset:0;width:100%;height:100%;display:block;filter:drop-shadow(0 0 8px #b9d6ff88)}
+@media(prefers-reduced-motion:reduce){.ocean-atmosphere{opacity:.7}.sound-journey:before{opacity:1}}
+
+/* Legibility pass: keep the central sound trace visibly in front of the ocean film. */
+#journeyWave{z-index:2;opacity:1;mix-blend-mode:screen;filter:drop-shadow(0 0 7px #b5dfff77)}
+#journeyChapters{z-index:3}
+.animal-3d{z-index:4}
+.ascii-creature{filter:drop-shadow(0 0 12px #d7d5ff99);image-rendering:auto}
+/* A luminous, slender frequency ribbon leaves the animal silhouettes readable. */
+#journeyWave{filter:none;opacity:.82}
+.sound-chapter[data-animal="dolphin"]{direction:rtl}
+.sound-chapter[data-animal="dolphin"]>*{direction:ltr}
+.animal-3d,.animal-3d .sculpture,.ascii-creature{filter:none}
+.ascii-creature{filter:drop-shadow(0 0 5px #b9e6ff55)}
+.ocean-atmosphere{overflow:hidden}
+.ocean-atmosphere:before{content:'';position:absolute;inset:0;background:repeating-conic-gradient(from 166deg at 50% -8%,transparent 0deg 9deg,#a1e9ff12 11deg 13deg,transparent 15deg 26deg);mask-image:linear-gradient(#000,transparent 80%);transform-origin:50% 0;animation:deepRays 16s ease-in-out infinite alternate}
+.ocean-atmosphere:after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 15%,transparent 20%,#010e2580 95%);pointer-events:none}
+.water-threshold:after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at center,#d9faff70,transparent 65%);opacity:var(--entry-flash,0);transform:scale(calc(1 + var(--plunge,0)));pointer-events:none}
+.water-ripples{animation:surfaceSwell 7s ease-in-out infinite alternate}
+.is-submerged .chapter-index{color:#a8e6ef}
+@keyframes deepRays{from{transform:rotate(-4deg);opacity:.45}to{transform:rotate(4deg);opacity:.9}}
+@keyframes surfaceSwell{to{transform:perspective(400px) rotateX(65deg) scale(1.12);opacity:.9}}
+@media(max-width:760px){.sound-chapter[data-animal="dolphin"]{direction:ltr}}
+@media(prefers-reduced-motion:reduce){.ocean-atmosphere:before,.water-ripples{animation:none}.water-threshold:after{display:none}}
+/* Avoid repainting large blurred films while scrolling. */
+/* Keep background motion on compositor transforms instead of animated full-screen filters. */
+.prism-film{filter:saturate(1.2);animation:oceanDrift 24s ease-in-out infinite alternate;will-change:transform}
+.ocean-caustics{filter:none;opacity:.38}
+.ocean-flare{filter:none;opacity:.5}
+.grain{opacity:.07}
+section.content,.panel{backdrop-filter:none}
+@keyframes oceanDrift{from{transform:scale(1.06) translate3d(-1%,0,0)}to{transform:scale(1.1) translate3d(1%,1%,0)}}
+@media(prefers-reduced-motion:reduce){.prism-film{animation:none}}
+/* The live instrument sits with the animal and central frequency, in the same chapter. */
+.journey-instrument{margin-top:26px;padding:22px 24px;border:1px solid #c8dfff38;border-radius:16px;background:linear-gradient(135deg,#22213bd9,#102c3bd9);box-shadow:none;max-width:420px;direction:ltr}
+.journey-instrument:hover{transform:none;box-shadow:none}
+.journey-instrument #modeTitle{font:400 34px/1.1 Italiana,Georgia,serif;margin:8px 0 12px;color:#fff0fb}
+.journey-instrument .eyebrow{font-size:8px;letter-spacing:.18em}
+.journey-instrument p{font-size:11px;line-height:1.6}
+.journey-instrument .animal-stage{display:none}
+.journey-instrument .voice-modes{margin:16px 0;gap:8px}
+.journey-instrument .voice-modes button{padding:9px 12px;font-size:11px}
+.journey-instrument .micro{margin:18px 0 10px;gap:13px}
+.journey-instrument .round{width:52px;height:52px;font-size:21px;box-shadow:0 0 22px #ef9ef425}
+.journey-instrument .status{font-size:9px;line-height:1.6;letter-spacing:.1em}
+.journey-instrument .wave{height:64px;margin:8px 0 16px}
+.journey-instrument .small{font-size:10px!important;margin-bottom:0}
+.chapter-try[hidden]{display:none}
+.archive-lab{grid-template-columns:1fr;max-width:850px}
+@media(max-width:760px){.journey-instrument{width:100%;padding:20px}.chapter-copy{width:100%}.sound-chapter{padding-right:16vw}.chapter-copy h3{font-size:68px}.journey-instrument .controls{gap:8px}.journey-instrument .controls input{width:110px}}
+/* Animal selection stays above decorative water and waveform layers. */
+.animal-3d{pointer-events:auto;cursor:pointer;border-radius:24px}
+.animal-3d:focus-visible{outline:2px solid #a5e5ff;outline-offset:4px}
+.animal-3d .sculpture{pointer-events:none}
+.journey-instrument{position:relative;z-index:5}
+/* Colored atmosphere replaces the photograph. */
+.prism-film{animation:none;filter:none;transform:none;inset:0;will-change:auto}
+.animal-call-hint{position:absolute;bottom:8%;left:0;right:0;text-align:center;font:9px 'DM Sans',sans-serif;letter-spacing:.18em;color:#c1d5e6;opacity:.65;pointer-events:none;transition:color .2s,opacity .2s}
+.animal-3d:hover .animal-call-hint,.animal-3d:focus-visible .animal-call-hint,.animal-3d.calling .animal-call-hint{color:#e8faff;opacity:1}
+.animal-3d.calling .ascii-creature{filter:drop-shadow(0 0 12px #b1efffa0)}
+@media(prefers-reduced-motion:reduce){.animal-call-hint{transition:none}}
+/* Open sky above the waterline; all scenery stays behind animal interaction. */
+.sound-journey{background:linear-gradient(180deg,#293e61 0%,#35536f 13%,#465773 25%,#20334f 35%,#101e36 44%,#08283d 72%,#061628 100%)}
+.journey-heading{background:radial-gradient(ellipse at 76% 15%,#a6d8ee20,transparent 65%)}
+#chapter-bird{isolation:isolate}
+.bird-sky{position:absolute;inset:0;overflow:hidden;z-index:0;pointer-events:none;background:linear-gradient(90deg,#17273d55,transparent 60%),linear-gradient(180deg,#72acd81f,transparent 80%)}
+.sky-sun{position:absolute;top:6%;right:14%;width:clamp(110px,16vw,210px);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,#fff1cd90 0%,#ffedca50 27%,#f8dabb17 52%,transparent 72%)}
+.sky-cloud{position:absolute;width:clamp(240px,35vw,560px);height:160px;background:radial-gradient(ellipse at 25% 67%,#d8e9f570 0%,transparent 47%),radial-gradient(ellipse at 49% 48%,#eaf2fa70 0%,transparent 50%),radial-gradient(ellipse at 73% 65%,#d5e4f565 0%,transparent 48%);animation:skyBreeze 28s ease-in-out infinite alternate;opacity:.7;pointer-events:none}
+.cloud-high{top:4%;right:-5%;width:43%;opacity:.5}
+.cloud-low{top:43%;right:2%;animation-duration:34s;animation-delay:-12s}
+.cloud-horizon{bottom:4%;right:8%;width:55%;height:180px;opacity:.4;animation-duration:40s;animation-delay:-8s}
+#chapter-bird .animal-3d:before{background:radial-gradient(ellipse,#b8dafa20,transparent 70%);filter:none}
+.sky-field-note{position:relative;right:auto;bottom:auto;width:min(340px,100%);z-index:1;align-self:flex-end;margin:16px 4% 0 0;border-top:1px solid #d6ecff40;padding-top:20px;pointer-events:none;color:#e3effa}
+.sky-field-note>span{font-size:9px;letter-spacing:.2em;color:#c6dbec}
+.sky-field-note p{font:400 clamp(25px,2.2vw,32px)/1.25 Italiana,Georgia,serif;margin:14px 0}
+.sky-field-note small{font-size:10px;letter-spacing:.04em;color:#c3d8eb}
+#chapter-bird .chapter-index{color:#d4e7f4}
+@keyframes skyBreeze{from{transform:translate3d(-3%,0,0)}to{transform:translate3d(7%,-8px,0)}}
+/* Fill the lower-right space with useful routes back to the animals. */
+#research{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(250px,1fr);gap:16px 8%;align-items:start}
+#research>.eyebrow{grid-column:1 / -1}
+.listening-guide{margin-top:20px;padding:28px;border:1px solid #b9d7eb30;border-radius:16px;background:linear-gradient(145deg,#a3c9e20c,#548aab08)}
+.listening-guide>.eyebrow{font-size:8px;letter-spacing:.22em}
+.listening-guide h3{font:400 36px/1.1 Italiana,Georgia,serif;margin:18px 0 22px}
+.listening-guide a{display:flex;align-items:center;gap:15px;color:#e5edf7;text-decoration:none;padding:20px 0;border-top:1px solid #bad7ec26;transition:color .2s}
+.listening-guide a>span{font:10px monospace;color:#97bed6}
+.listening-guide a>div{flex:1;font-size:14px}
+.listening-guide small{display:block;margin-top:6px;font-size:10px;color:#b8c4d9;line-height:1.6}
+.listening-guide b{font-weight:400;color:#a0d5ed}
+.listening-guide a:hover{color:#b4ebff}
+.listening-guide a:focus-visible{outline:2px solid #a5e5ff;outline-offset:5px}
+@media(max-width:900px){#research{grid-template-columns:1fr}.listening-guide{max-width:580px}}
+@media(max-width:760px){.sky-field-note{width:100%;margin:12px 0 0;padding-top:15px}.sky-field-note p{font-size:26px}.sky-cloud{width:85%}.cloud-high{right:-25%}.cloud-low{top:20%;right:-15%}.cloud-horizon{bottom:15%;width:100%}.sky-sun{top:3%;right:10%}.listening-guide{padding:22px}}
+@media(prefers-reduced-motion:reduce){.sky-cloud{animation:none}.listening-guide a{transition:none}}
+/* Consistent waveform finish at every scale. */
+.pixel-signal,#journeyWave{filter:none;opacity:.9}
+#voicewave,#specieswave{border:0;filter:none}
+
+/* Keep the caption in the bird column; feather scenery before it reaches its bounds. */
+.bird-scene{position:relative;z-index:3;min-width:0;width:100%;display:flex;flex-direction:column;align-self:center;padding-bottom:24px}
+.bird-scene .animal-3d{width:100%;min-height:440px}
+.bird-scene .animal-call-hint{bottom:12px;font-size:8px;letter-spacing:.12em}
+.sky-cloud{-webkit-mask-image:radial-gradient(ellipse at center,#000 5%,transparent 68%);mask-image:radial-gradient(ellipse at center,#000 5%,transparent 68%)}
+.bird-sky{background:none;-webkit-mask-image:linear-gradient(transparent,#000 12%,#000 80%,transparent);mask-image:linear-gradient(transparent,#000 12%,#000 80%,transparent)}
+#chapter-bird>.chapter-side-label{bottom:24px;right:6%;font-size:8px;opacity:.65}
+@media(max-width:760px){.bird-scene{padding-bottom:30px}.bird-scene .animal-3d{min-height:300px}.sky-field-note{align-self:stretch}.sky-field-note p{font-size:26px}}
+/* Compact chapters: keep the animal and instrument within a shorter scene. */
+.sound-journey{min-height:0}
+.journey-heading{padding:70px 20px 30px}
+.journey-heading h2{font-size:clamp(50px,7vw,94px);margin:18px 0}
+.sound-chapter{min-height:0;padding:48px max(6vw,24px) 56px;gap:3vw}
+.chapter-copy h3{font-size:clamp(60px,7.5vw,108px);margin:12px 0}
+.chapter-copy>p{font-size:12px;line-height:1.65;margin:12px 0;max-width:390px}
+.journey-instrument{margin-top:18px;padding:18px 20px;max-width:420px;border-radius:14px}
+.journey-instrument #modeTitle{font-size:30px;margin:6px 0 8px}
+.journey-instrument>p{margin:6px 0;font-size:11px;line-height:1.5}
+.journey-instrument .voice-modes{margin:10px 0 8px}
+.journey-instrument .voice-modes button{padding:7px 10px}
+.journey-instrument .micro{margin:10px 0 4px}
+.journey-instrument .round{width:44px;height:44px;font-size:18px}
+.journey-instrument .wave{height:40px;margin:6px 0 12px}
+.journey-instrument .controls{gap:10px}
+.audio-details{margin-top:12px;color:#bfcbe0;font-size:10px;line-height:1.5}
+.audio-details summary{cursor:pointer;padding:4px 0}
+.audio-details summary:focus-visible{outline:1px solid #a5e5ff;outline-offset:3px}
+.audio-details .small{margin:8px 0 0}
+.animal-3d{min-height:320px}
+.animal-3d .sculpture{width:min(100%,500px)}
+.bird-scene{padding-bottom:10px}
+.bird-scene .animal-3d{min-height:320px}
+.sky-field-note{align-self:center;width:auto;margin:8px 0 0;padding:8px 0 0;border:0;text-align:center}
+.sky-field-note>span{font-size:8px;letter-spacing:.18em;opacity:.7}
+.water-threshold{height:180px}
+.chapter-side-label{bottom:15px;font-size:8px}
+@media(max-width:760px){
+ .sound-chapter,.sound-chapter:nth-child(2){min-height:0;padding:24px 14vw 36px 24px;gap:0}
+ .chapter-copy h3{font-size:58px;margin:8px 0}
+ .chapter-copy>p{font-size:12px;line-height:1.55;margin:8px 0 12px}
+ .animal-3d,.bird-scene .animal-3d{min-height:210px}
+ .animal-3d .sculpture{width:min(100%,310px)}
+ .bird-scene{padding-bottom:14px}
+ .sky-field-note{width:auto;margin:2px 0;padding:0;align-self:center}
+ .journey-instrument{padding:16px;margin-top:12px}
+ .journey-instrument #modeTitle{font-size:28px}
+ .journey-instrument .wave{height:34px}
+ .journey-instrument .status{font-size:8px}
+ .journey-heading{padding:50px 20px 20px}
+ .water-threshold{height:140px}
+}
+
+/* Keep the experience in its original single-column flow. */
+#research{display:block}
+/* Quiet artwork in the existing right margin, without adding a sidebar or card. */
+.experience-art{position:absolute;top:75px;right:3%;width:clamp(250px,26vw,390px);pointer-events:none;z-index:0;opacity:.8}
+.experience-art svg{display:block;width:100%;height:auto}
+.experience-art>span{display:block;text-align:center;font:8px 'DM Sans',sans-serif;letter-spacing:.24em;color:#a7bdd5;margin-top:10px}
+#experience>.sectionhead,#experience>.lab,#experience>#research{position:relative;z-index:1}
+@media(max-width:1300px){.experience-art{width:250px;right:2%;top:95px;opacity:.75}}
+@media(max-width:1100px){.experience-art{display:none}}
+/* The organic surface is the interaction target, with no card chrome. */
+.experience-art{pointer-events:auto;z-index:2;border:0;border-radius:50%;padding:0;background:none;color:inherit;cursor:crosshair;touch-action:pan-y;opacity:.9;text-align:center}
+.experience-art canvas{display:block;width:100%;height:auto;aspect-ratio:360 / 500}
+.experience-art>span{font-size:7px;letter-spacing:.14em;margin:0;opacity:.6;transition:opacity .2s}
+.experience-art:hover>span,.experience-art:focus-visible>span{opacity:1}
+.experience-art:focus-visible{outline:1px solid #a5e5ff80;outline-offset:5px}
+@media(prefers-reduced-motion:reduce){.experience-art>span{transition:none}}
+/* Introduce the live experience before entering the sky and underwater chapters. */
+.experience-intro{position:relative;min-height:clamp(480px,43vw,620px);display:flex;align-items:center}
+.experience-intro>.sectionhead{max-width:740px}
+#signalArchive{padding-top:55px}
+#signalArchive .archive-lab{margin-top:0}
+@media(max-width:1100px){.experience-intro{min-height:0}}
+/* Continuous section colors: each scene ends at the next scene's starting shade. */
+section.experience-intro{background:linear-gradient(180deg,transparent 0%,#202f4b99 35%,#293e61 100%)}
+.sound-journey{background:linear-gradient(180deg,#293e61 0%,#35536f 13%,#465773 25%,#20334f 35%,#101e36 44%,#08283d 72%,#061628 100%)}
+.sound-journey:before{background:linear-gradient(180deg,transparent 0%,#5ab7d51a 19%,#0a567330 46%,#03142755 78%,transparent 100%);transition:opacity .35s ease}
+.sound-chapter,.sound-chapter:nth-of-type(3),.sound-chapter:nth-of-type(4){background:none}
+.ocean-atmosphere{-webkit-mask-image:linear-gradient(transparent,#000 100px,#000 calc(100% - 150px),transparent);mask-image:linear-gradient(transparent,#000 100px,#000 calc(100% - 150px),transparent)}
+section#signalArchive{background:linear-gradient(180deg,#061628 0%,#111b32 25%,#17162f 70%,#19162f 100%)}
+.content:before{-webkit-mask-image:linear-gradient(transparent,#000 20%,#000 75%,transparent);mask-image:linear-gradient(transparent,#000 20%,#000 75%,transparent)}
+.foot{background:linear-gradient(180deg,#19162f,#0e1024);border-top-color:transparent}
+/* Quieter reveals keep content connected to the scene as it enters view. */
+.reveal,.scroll-reveal{transform:translateY(18px);filter:none;transition:opacity .65s ease,transform .75s cubic-bezier(.2,.7,.2,1)}
+.reveal.visible,.scroll-reveal.in-view{opacity:1;transform:none;filter:none}
+@media(prefers-reduced-motion:reduce){.reveal,.scroll-reveal{opacity:1;transform:none;transition:none}.sound-journey:before{transition:none}}
+/* A longer sound thread dissolves into the neighboring scenes. */
+main#top{position:relative}
+main#top>#journeyWave{position:absolute;left:0;right:auto;bottom:auto;z-index:5;pointer-events:none;opacity:.58;mix-blend-mode:screen}
+/* Keep the hero copy together: independent scroll offsets were closing its gaps. */
+.hero .kinetic-title,.hero .intro,.hero .jump{transform:none!important;will-change:auto}
+.hero{padding-bottom:clamp(110px,12vh,170px)}
+.hero h1{line-height:.98;margin:24px 0 32px}
+.hero .intro{margin:0;line-height:1.65}
+.hero .jump{margin-top:24px}
+.hero .pixel-signal{width:min(45vw,720px);right:2%;bottom:8%;height:clamp(160px,23vw,300px)}
+@media(max-width:760px){
+ .hero{padding-bottom:190px}
+ .hero h1{line-height:1.03;letter-spacing:-2px;margin:22px 0 26px}
+ .hero .intro{max-width:400px}
+ .hero .pixel-signal{width:65%;height:125px;bottom:18px;right:0;opacity:.55}
+ .hero .jump{margin-top:22px}
+}
+/* Give the footer a distinct closing surface. */
+.foot{background:linear-gradient(180deg,#0c1020 0%,#080c18 100%);border-top:1px solid #b9c8eb40;box-shadow:0 -18px 45px #03071330}
+.footer-bottom{border-top-color:#c6d4f030}
+/* One contour texture connects the surface, archive and footer. */
+:root{--water-contours:url('deep-water-pattern.svg')}
+.light-trails{inset:0;background-image:var(--water-contours);background-position:right center;background-size:cover;background-repeat:no-repeat;opacity:.7;animation:none;transform:none;will-change:auto;mix-blend-mode:screen}
+.ocean-caustics{display:none}
+#signalArchive::before{background-image:radial-gradient(ellipse at 85% 48%,#7bb8d21a,transparent 65%),var(--water-contours)}
+.foot::before{background-image:var(--water-contours)}
+@media(max-width:760px){.light-trails{opacity:.45}}
+/* Sky above the threshold, water below it. */
+#sea,.ocean-caustics{display:none}
+.prism-film{background:radial-gradient(ellipse at 77% 16%,#d8bba640,transparent 50%),linear-gradient(165deg,#383c58,#435b75 60%,#465c78)}
+.light-trails{background:radial-gradient(ellipse 55% 22% at 76% 25%,#e5dfdb24,transparent 75%),radial-gradient(ellipse 50% 16% at 32% 70%,#ced6ec14,transparent 75%);opacity:.7}
+.ocean-flare{display:none}
+section.experience-intro{background:linear-gradient(180deg,transparent,#465c78)}
+.sound-journey{background:linear-gradient(180deg,#465c78 0px,#465c78 var(--surface-y,600px),#17384f var(--water-y,780px),#08283d 75%,#061628 100%)}
+.sound-journey:before{top:var(--water-y,780px)}
+.ocean-atmosphere{top:var(--water-y,780px)}
+.bird-sky{background:radial-gradient(ellipse at 76% 18%,#f8dbb52b,transparent 55%)}
+#chapter-bird .sky-cloud{opacity:.7}
+#chapter-bird .chapter-index{color:#e0e9f3}
+/* Restore the original geometric surface treatment, fading before the bird's sky. */
+:root{--surface-pattern-opacity:1}
+#sea{display:block;opacity:calc(.48 * var(--surface-pattern-opacity))}
+.light-trails{inset:-25%;background:repeating-linear-gradient(110deg,transparent 0 125px,#cce2ff17 126px,transparent 129px),radial-gradient(ellipse at 65% 12%,#f1ebff61,transparent 37%);opacity:calc(.6 * var(--surface-pattern-opacity));animation:trailDrift 23s ease-in-out infinite alternate}
+.ocean-caustics{display:block;filter:none;opacity:calc(.38 * var(--surface-pattern-opacity))}
+.ocean-flare{display:block;filter:none;opacity:calc(.5 * var(--surface-pattern-opacity))}
+@media(prefers-reduced-motion:reduce){.light-trails{animation:none}}
+/* Leave the deep-water scene behind as the archive begins. */
+.sound-journey{background:linear-gradient(180deg,#465c78 0px,#465c78 var(--surface-y,600px),#17384f var(--water-y,780px),#08283d 72%,#171d32 91%,#211d35 100%)}
+.ocean-atmosphere{-webkit-mask-image:linear-gradient(transparent,#000 100px,#000 calc(100% - 320px),transparent);mask-image:linear-gradient(transparent,#000 100px,#000 calc(100% - 320px),transparent)}
+section#signalArchive{background:linear-gradient(180deg,#211d35 0%,#252039 45%,#19182c 100%)}
+#signalArchive::before{background:radial-gradient(ellipse at 85% 40%,#ccb8df12,transparent 65%),repeating-linear-gradient(110deg,transparent 0 125px,#d9cdeb0c 126px,transparent 128px);opacity:.45}
+#signalArchive::after{background:radial-gradient(ellipse at 90% 55%,#e0c4b80b,transparent 55%);opacity:.65}
+.foot::before{background:repeating-linear-gradient(110deg,transparent 0 125px,#d9cdeb0c 126px,transparent 128px);opacity:.25}
+
+/* Original archive treatment from the supplied HTML and old stylesheets. */
+#signalArchive{position:relative;isolation:isolate}
+section#signalArchive{
+ background:linear-gradient(180deg,transparent,#171331df 12%,#14112be8 80%,transparent);
+ backdrop-filter:none
+}
+#signalArchive::before{
+ content:'';position:absolute;inset:0;pointer-events:none;
+ background:radial-gradient(circle at 90% 20%,#9b94ff22,transparent 40%);opacity:.7;
+ -webkit-mask-image:none;mask-image:none
+}
+#signalArchive::after,.foot::before{content:none}
+#signalArchive>.lab,#signalArchive>#research{position:relative;z-index:1}
+.ocean-caustics{display:block;filter:none;opacity:calc(.38 * var(--surface-pattern-opacity))}
+
+/* Three topographic contour forms accompany the research statement. */
+#research{position:relative;min-height:540px;padding-right:42%}
+#research .experience-art{display:block;top:0;right:0;width:clamp(260px,34vw,430px);opacity:.85}
+#research .experience-art canvas{aspect-ratio:360 / 500}
+#research .experience-art>span{font-size:7px}
+@media(max-width:900px){#research{padding-right:0;min-height:0}#research .experience-art{position:relative;top:auto;right:auto;width:min(360px,100%);margin:25px auto 0}}
+
+#research .experience-art{touch-action:none;cursor:grab;border-radius:0}
+#research .experience-art.is-dragging{cursor:grabbing}
+/* Extend the contour playground slightly to the left, keeping its right edge anchored. */
+#research .experience-art{width:clamp(290px,38vw,480px)}
+@media(max-width:900px){#research .experience-art{width:min(390px,100%)}}
+
+/* Extra canvas space, with the contour forms kept at their previous scale. */
+#research .experience-art canvas{aspect-ratio:402 / 500}
